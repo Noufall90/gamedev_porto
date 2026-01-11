@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import Header from "./bar/header.vue";
 import Footer from "./bar/footer.vue";
 
-const categories = ['Semua', 'Projek', 'GameJam', 'Indie', 'Lomba'];
+const categories = ['Semua', 'Projek', 'GameJam', 'Lomba'];
 const tools = [
   { name: 'Unity', icon: '⚙️' },
   { name: 'Blender 3D', icon: '🧊' },
@@ -146,7 +146,7 @@ const filteredProjects = computed(() => {
           <div class="flex flex-col gap-12">
             <div class="text-center md:text-left md:flex md:items-end md:justify-between gap-8">
               <div>
-                <h2 class="text-5xl font-black mb-4 text-stone-900">Projek Milik Saya</h2>
+                <h2 class="text-5xl font-black mb-4 text-stone-900">Projek Saya</h2>
                 <p class="text-xl text-stone-600">Beberapa karya yang saya ciptakan dengan tim.</p>
               </div>
               <div class="flex bg-white p-2 rounded-2xl shadow-lg border border-stone-200 self-start md:self-auto">
@@ -205,7 +205,7 @@ const filteredProjects = computed(() => {
           </div>
           
           <div class="flex justify-center">
-            <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-3 md:grid-cols-4 gap-8">
               <div v-for="tool in tools" :key="tool.name" class="group flex flex-col items-center gap-4 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/20">
                 <div class="text-5xl group-hover:scale-125 transition-transform duration-300">{{ tool.icon }}</div>
                 <span class="text-sm font-bold uppercase tracking-wider text-stone-200">{{ tool.name }}</span>
