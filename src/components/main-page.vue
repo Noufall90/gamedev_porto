@@ -48,7 +48,7 @@ const projects = ref([
   },
   { 
     title: 'Letter', 
-    category: 'Lomba', 
+    category: 'GameJam', 
     color: 'from-sky-900 to-green-800',
     icon: '📜',
     desc: '"Letter" adalah game bertahan hidup yang menegangkan di mana Anda harus menjelajahi dunia jiwa, mencari gerbang keluar untuk menemukan jalan keluar dari dunia tersebut. Namun, hati-hati, musuh Anda bersembunyi di balik hantu.',
