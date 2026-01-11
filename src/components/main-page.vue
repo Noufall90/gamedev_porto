@@ -108,12 +108,12 @@ const filteredProjects = computed(() => {
           <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 rounded-full blur-3xl"></div>
         </div>
         
-        <div class="max-w-6xl mx-auto px-6 py-28 flex flex-col md:flex-row items-center gap-16 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-28 flex flex-col md:flex-row items-center gap-8 md:gap-16 relative z-10">
           <div class="flex-1">
             <div class="mb-6 inline-block">
               <span class="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-semibold">👋 Selamat Datang</span>
             </div>
-            <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight text-stone-900">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-black mb-6 leading-tight text-stone-900">
               Halo saya <span class="bg-linear-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Naufal</span>
             </h1>
             <p class="text-xl text-stone-600 mb-10 leading-relaxed max-w-xl">
@@ -128,7 +128,7 @@ const filteredProjects = computed(() => {
             </div>
           </div>
           
-          <div class="flex-1 flex justify-center">
+          <div class="flex-1 justify-center hidden sm:flex">
             <div class="relative">
               <div class="absolute inset-0 bg-linear-to-br from-amber-300 to-orange-300 rounded-3xl blur-2xl opacity-40"></div>
               <div class="w-80 h-80 bg-linear-to-br from-amber-100 to-orange-100 rounded-3xl flex items-center justify-center relative overflow-hidden shadow-2xl">
@@ -141,13 +141,13 @@ const filteredProjects = computed(() => {
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="py-32">
-        <div class="max-w-6xl mx-auto px-6">
+      <section id="projects" class="py-16 sm:py-24 md:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="flex flex-col gap-12">
             <div class="text-center md:text-left md:flex md:items-end md:justify-between gap-8">
               <div>
-                <h2 class="text-5xl font-black mb-4 text-stone-900">Projek Saya</h2>
-                <p class="text-xl text-stone-600">Beberapa karya yang saya ciptakan dengan tim.</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-stone-900">Projek Saya</h2>
+                <p class="text-sm sm:text-base md:text-xl text-stone-600">Beberapa karya yang saya ciptakan dengan tim.</p>
               </div>
               <div class="flex bg-white p-2 rounded-2xl shadow-lg border border-stone-200 self-start md:self-auto">
                 <button 
@@ -161,7 +161,7 @@ const filteredProjects = computed(() => {
               </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div 
                 v-for="(project, index) in filteredProjects" 
                 :key="index" 
@@ -173,7 +173,7 @@ const filteredProjects = computed(() => {
                 </div>
                 <div class="p-8 flex flex-col flex-1">
                   <div class="flex justify-between items-start mb-4 gap-4">
-                    <h3 class="text-2xl font-bold text-stone-900 flex-1">{{ project.title }}</h3>
+                    <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-stone-900 flex-1">{{ project.title }}</h3>
                     <span class="px-4 py-2 bg-stone-100 text-stone-700 text-xs font-black rounded-full uppercase tracking-widest whitespace-nowrap">{{ project.category }}</span>
                   </div>
                   <p class="text-stone-600 text-sm mb-8 leading-relaxed flex-1">{{ project.desc }}</p>
@@ -192,23 +192,23 @@ const filteredProjects = computed(() => {
       </section>
 
       <!-- Skills Section -->
-      <section class="relative py-10 bg-linear-to-r from-stone-900 via-white-800 to-black text-white overflow-hidden">
+      <section class="relative py-8 sm:py-10 md:py-16 bg-linear-to-r from-stone-900 via-white-800 to-black text-white overflow-hidden">
         <div class="absolute inset-0 opacity-10">
           <div class="absolute top-0 left-1/4 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
           <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-green-400 rounded-full blur-3xl"></div>
         </div>
         
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-          <div class="text-center mb-16">
-            <h2 class="text-5xl font-black mb-4">Tech Stack Saya</h2>
-            <p class="text-xl text-stone-300">Alat-alat yang saya gunakan untuk membuat game.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+          <div class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4">Tech Stack Saya</h2>
+            <p class="text-sm sm:text-base md:text-xl text-stone-300">Alat-alat yang saya gunakan untuk membuat game.</p>
           </div>
           
           <div class="flex justify-center">
-            <div class="grid grid-cols-3 md:grid-cols-4 gap-8">
-              <div v-for="tool in tools" :key="tool.name" class="group flex flex-col items-center gap-4 p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/20">
-                <div class="text-5xl group-hover:scale-125 transition-transform duration-300">{{ tool.icon }}</div>
-                <span class="text-sm font-bold uppercase tracking-wider text-stone-200">{{ tool.name }}</span>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-8">
+              <div v-for="tool in tools" :key="tool.name" class="group flex flex-col items-center gap-2 sm:gap-4 p-4 sm:p-8 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/20">
+                <div class="text-3xl sm:text-4xl lg:text-5xl group-hover:scale-125 transition-transform duration-300">{{ tool.icon }}</div>
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-stone-200">{{ tool.name }}</span>
               </div>
             </div>
           </div>
