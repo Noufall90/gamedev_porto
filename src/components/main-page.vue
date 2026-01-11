@@ -144,17 +144,17 @@ const filteredProjects = computed(() => {
       <section id="projects" class="py-16 sm:py-24 md:py-32">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
           <div class="flex flex-col gap-12">
-            <div class="text-center md:text-left md:flex md:items-end md:justify-between gap-8">
+            <div class="text-center md:text-left md:flex md:items-end md:justify-between gap-4 md:gap-8 flex-col md:flex-row">
               <div>
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-stone-900">Projek Saya</h2>
                 <p class="text-sm sm:text-base md:text-xl text-stone-600">Beberapa karya yang saya ciptakan dengan tim.</p>
               </div>
-              <div class="flex bg-white p-2 rounded-2xl shadow-lg border border-stone-200 self-start md:self-auto">
+              <div class="flex flex-wrap gap-2 sm:gap-2 bg-white p-2 rounded-2xl shadow-lg border border-stone-200 justify-center md:justify-start">
                 <button 
                   v-for="cat in categories" 
                   :key="cat"
                   @click="activeCategory = cat"
-                  :class="['px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300', activeCategory === cat ? 'bg-linear-to-r from-amber-400 to-orange-400 text-white shadow-lg' : 'text-stone-600 hover:text-stone-900']"
+                  :class="['px-3 sm:px-6 py-2 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 whitespace-nowrap', activeCategory === cat ? 'bg-linear-to-r from-amber-400 to-orange-400 text-white shadow-lg' : 'text-stone-600 hover:text-stone-900']"
                 >
                   {{ cat }}
                 </button>
